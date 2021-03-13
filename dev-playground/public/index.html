@@ -107,8 +107,8 @@
 					lastGen = new Date();
 
 					var content = editor.getSession().getValue();
-
-					$http.post('/pdf', { content: content }).
+					eval(content);
+					$http.post('/pdf',  dd ).
 						success(function (data, status, headers, config) {
 
 							document.getElementById('pdfV').src = data;

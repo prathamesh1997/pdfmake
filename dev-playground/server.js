@@ -4,7 +4,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 
-var pdfMakePrinter = require('../src/printer');
+var pdfMakePrinter = require('pdfmake'); 
 
 var app = express();
 
@@ -42,9 +42,9 @@ function createPdfBinary(pdfDoc, callback) {
 }
 
 app.post('/pdf', function (req, res) {
-	eval(req.body.content);
-
-	createPdfBinary(dd, function (binary) {
+	// eval(req.body.content);
+	
+	createPdfBinary(req.body, function (binary) {
 		res.contentType('application/pdf');
 		res.send(binary);
 	}, function (error) {
@@ -54,7 +54,7 @@ app.post('/pdf', function (req, res) {
 });
 
 var server = http.createServer(app);
-var port = process.env.PORT || 1234;
+var port = process.env.PORT || 8000;
 server.listen(port);
 
 console.log('http server listening on %d', port);

@@ -1,0 +1,201 @@
+// playground requires you to assign document definition to a variable called dd
+
+var dd = {
+    header: {
+       
+        columns: [
+         {
+            
+            image: 'data:image/png;base64,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',
+            width: 100,
+            margin:[30,20,0,0]
+        },
+        {
+          stack: [
+            
+            {text:'SVAN ANALYTICAL INSTRUMENTS PVT. LTD',color:'#23b050',bold:true,fontSize:14,alignment:'left',width: 'auto',},
+             {text:'Regd. Office:',fontSize:12,color:'#0c2a67',bold:true,decoration:['underline'],width: 'auto',},
+                '308,Jai Estate, Opp. Fire Brigade, Near by nandi Palace, MIDC',
+                'Phase 1, Dombivali East, Thane Dist, Maharashtra, India-421203.',
+             {text:'Tele: & Mob.: 7304555237',fontSize:12,color:'#0c2a67',bold:true,width: 'auto'},
+             {text:'Website: www.svananalytical.com & www.svan.in',fontSize:12,color:'#0c2a67',bold:true,width: 'auto'},
+          ],
+          fontSize: 10,
+           margin: [50, 20, 0, 0],
+           
+        }
+        ],
+        columnGap: 40,
+    },
+    	content: [
+		 {columns:[
+		    { text:[
+		         {
+		           text:'Ref No:',
+		         },
+		         {
+		           text:'SAIPL1346',bold:true
+		         },
+		      ]},
+		     {
+		         text:'Date: 04.08.2020', bold:true,
+		         margin:[100,0,0,0]
+		     }
+		  ],
+		    columnGap: 100
+		 },
+		 {text:'\n To'},
+		 {text:'Unichem Laboratories Ltd-Pithampur'},
+		 {text:'Location: Plot No. 197, Sector NO. 1, Pithampur, Dhar 454 775'},
+		 {text:[
+		    {text:'Kind Attn.:',bold:true},   
+		    {text:' Mr. Sanjay Singh Thakur'}   
+		  ]},
+		 {text:[
+		    {text:'\nSubject: ', bold:true},   
+		    {text:'Marketing Director Looking for Next Role - 10 years experience'},   
+		  ]},
+		 {text:[
+		    {text:'\nRef: ', bold:true},   
+		    {text:'Prathamesh Pandurang Sawant\n'},   
+		  ]},
+		  
+		  	{
+			style: 'tableExample',
+			table: {
+				headerRows: 1,
+				widths: ['auto', 300, 60,30,60],
+				
+				// dontBreakRows: true,
+				// keepWithHeaderRows: 1,
+				body: [
+					[{text: 'Sr.No.', style: 'tableHeader',alignment:'center'}, {text: 'Description', style: 'tableHeader',}, {text: 'Unit Price', style: 'tableHeader',alignment:'center'},{text: 'Qty.', style: 'tableHeader',alignment:'center'},{text:'Total price',style: 'tableHeader',alignment:'center'}],
+					[
+						{text:'1',alignment:'center'},
+						{text:[
+						 {text:'VOC - Gas Pro\n',bold:true,fontSize:10},
+						 {text:'Part No.: GASPRO\n',bold:true,fontSize:10},
+						 {text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',fontSize:10}    
+						],alignment:'justify'},
+					    {
+					        text:'₹ 178500', alignment:'right', fontSize:10
+					    },	
+					    {
+					        text:'2', alignment:'right', fontSize:10
+					    },
+					    {
+					        text:'₹ 178500', alignment:'right', fontSize:10
+					    },	
+					],
+					[
+						{text:'1',alignment:'center'},
+						{text:[
+						 {text:'VOC - PhoCheck Tiger\n',bold:true,fontSize:10},
+						 {text:'Part No.: PHOCHECK TIGER\n',bold:true,fontSize:10},
+						 {text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',fontSize:10}    
+						],alignment:'justify'},
+					    {
+					        text:'₹ 4,20,000', alignment:'right', fontSize:10
+					    },	
+					    {
+					        text:'2', alignment:'right', fontSize:10
+					    },
+					    {
+					        text:'₹ 4,20,000', alignment:'right', fontSize:10
+					    },	
+					],
+					[
+						{text:'1',alignment:'center'},
+						{text:[
+						 {text:'VOC - PhoCheck Tiger\n',bold:true,fontSize:10},
+						 {text:'Part No.: PHOCHECK TIGER\n',bold:true,fontSize:10},
+						 {text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',fontSize:10}    
+						],alignment:'justify'},
+					    {
+					        text:'₹ 4,20,000', alignment:'right', fontSize:10
+					    },	
+					    {
+					        text:'2', alignment:'right', fontSize:10
+					    },
+					    {
+					        text:'₹ 4,20,000', alignment:'right', fontSize:10
+					    },	
+					],
+				]
+			}
+		},
+		{
+		    text:"General Terms & Conditions:\n\n",alignment:'center',bold:true,fontSize:12,decoration:['underline']
+		},
+		{
+      // to treat a paragraph as a bulleted list, set an array of items under the ul key
+          ol: [
+            'Order to be placed on: Svan Analytical Instruments Pvt Ltd 308, Jai Estate, Opp SBI Bank, MIDC Phase 1, Dombivili (E) 421203. (T)-0251-2973900',
+            'Payment Terms: 100% Advance via TT.',
+            'Custom Tariff code: 90278090',
+            'Taxes: GST @ 18 % Extra',
+            'Delivery: 4-6 Weeks from the date of advance payment receipt.',
+            'Validity: 30 Days.',
+            'For Standards PO- kindly provide well in advance before 20-25 days form your Due Date. SINCE THE REFERENCE STANDARDS are imported and ordered against customer order ONLY as they come in special cool packs as they are perishable and have short expiry date.',
+            'Shelf Life for Standards is 4 Weeks.',        
+            'Our GST NO: 27AAMCS4625E1Z9 and MSMED NO: MH33E0006889'
+          ],
+          fontSize:11,
+          lineHeight:1.5
+        },
+        {
+            text:'\nPlease feel free to contact us for any clarifications.'
+        },
+        {
+            text:'\nThanks & Best Regards,'
+        },
+        {
+            text:'For SVAN Analytical Instruments Pvt. Ltd.,'
+        },
+        {
+            text:'\n\n\nSaurabh,'
+        },
+        {
+            text:'(7304555237)'
+        },
+        {
+            text:'\n(Note: It is computer generated document, hence signature does not required)',
+            bold:true,
+            color:'red',
+            alignment:'center',
+            fontSize:10
+        }
+	    ],
+       footer: function (currentPage, pageCount) {
+        return [{ text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'center',fontSize:10 }];
+      },
+   pageSize: 'A4',
+   pageMargins: [ 40, 135, 40, 50 ],
+   	styles: {
+		header: {
+			fontSize: 18,
+			bold: true,
+			margin: [0, 0, 0, 10]
+		},
+		subheader: {
+			fontSize: 16,
+			bold: true,
+			margin: [0, 10, 0, 5]
+		},
+		tableExample: {
+			margin: [0, 5, 0, 15]
+		},
+		tableHeader: {
+			bold: true,
+			fontSize: 11,
+			color: 'white',
+			fillColor:'#0A2060'
+			
+		},
+	
+	},
+	permissions: {
+    printing: 'highResolution', //'lowResolution'
+   
+  },
+}
